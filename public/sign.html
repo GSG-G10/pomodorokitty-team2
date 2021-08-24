@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign form</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sign.css">
 </head>
 
 <body>
     <div class="continer">
-        <form id="form" method="post" action="">
-            <div class="tittle text-center">login</div>
+        <form id="form">
+            <div class="tittle text-center">sign in</div>
             <input class="username style-input " id="usernaame-input" type="text" name="username" value="" placeholder="username" required>
             <br>
             <input class="password style-input " id="password" type="password" name="pssword" value="" placeholder="password" required>
-            <button type="submit">login</button>
+            <input class="password style-input " id="re-password" type="password" name="re-pssword" value="" placeholder="password again" required>
+            <button type="submit">sign in</button>
         </form>
         <div class="emptyfieldWarning" id="emptyfieldWarning"></div>
     </div>
