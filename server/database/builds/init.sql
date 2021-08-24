@@ -2,14 +2,14 @@ BEGIN;
 DROP TABLE IF EXISTS users , tasks CASCADE ;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     birth_date DATE 
 );
 CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(255) NOT NULL,
     is_done BOOLEAN DEFAULT false,
     duration INTEGER NOT NULL,
     user_id INTEGER REFERENCES users(id) 
