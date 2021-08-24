@@ -6,7 +6,7 @@ const login = (req, res) => {
   const { username, password } = req.body;
 
   // server side validation
-  Joi.validateAsync({ username, password }, loginSchema)
+  loginSchema.validateAsync({ username, password })
     .then((result) => console.log(result))
     .catch((err) => {
       console.log(err);
@@ -26,11 +26,10 @@ const signUp = (req, res) => {
   } = req.body;
 
   // server side validation
-  Joi.validateAsync(
+  signupSchema.validateAsync(
     {
       username, password, confirmdPassword, email,
-    },
-    signupSchema,
+    }
   )
     .then((result) => console.log(result))
     .catch((err) => {
