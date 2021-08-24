@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+html {
+
+    background-image: url("../img/bg.png");
+    background-size: 100%;
+    
+}
+.contener{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 282px;
+    font-size: 50px;
+}
+.contener img{
+    width: 50px;
+    
+}
