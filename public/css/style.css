@@ -1,72 +1,72 @@
-    @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
- :root {
-    --display-text: #fff;
-    --display-cont: #424563;
-    --gradient-end: #4d194d;
-    --gradient-start: #0b525b;
-}
-
-body {
-    background: linear-gradient( 53deg, var(--gradient-start), var(--gradient-end));
-    height: 900px;
-}
-
-header {
-    margin-top: 50px;
-}
-
-header h1 {
-    font-family: 'Redressed', 'cursive';
-    color: var(--display-text);
-    text-align: center;
-    font-size: 60px;
-    font-weight: 100;
-}
-
-.container {
-    justify-content: space-around;
-    align-items: center;
-}
-
-.cat img {
-    display: block;
-    margin: 0 auto;
-}
-
-.flex {
-    display: flex;
-}
-
-.display {
-    margin: 0px auto;
-    background: var(--display-cont);
-    font-size: 20px;
-    line-height: 1.4;
-    text-align: center;
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    color: var(--display-text);
-    width: 450px;
-    font-family: "Raleway", sans-serif;
-}
-
-.display p {
-    padding: 10px;
-}
-
-.buttonRow {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.buttonRow button {
-    display: block;
-    width: 50%;
-    padding: 10px;
+        @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --display-text: #fff;
+        --display-cont: #424563;
+        --gradient-end: #4d194d;
+        --gradient-start: #0b525b;
+    }
+    
+    body {
+        background: linear-gradient( 53deg, var(--gradient-start), var(--gradient-end));
+        height: 100vh;
+    }
+    
+    header {
+        margin-top: 50px;
+    }
+    
+    header h1 {
+        font-family: 'Redressed', 'cursive';
+        color: var(--display-text);
+        text-align: center;
+        font-size: 60px;
+        font-weight: 100;
+    }
+    
+    .container {
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .cat img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .flex {
+        display: flex;
+    }
+    
+    .display {
+        margin: 0px auto;
+        background: var(--display-cont);
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: center;
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: var(--display-text);
+        width: 450px;
+        font-family: "Raleway", sans-serif;
+    }
+    
+    .display p {
+        padding: 10px;
+    }
+    
+    .buttonRow {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .buttonRow button {
+        display: block;
+        width: 50%;
+        padding: 10px;
