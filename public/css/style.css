@@ -45,6 +45,11 @@
             margin: 0 auto;
         }
         
+        a {
+            display: block;
+            text-decoration: none;
+        }
+        
         .flex {
             display: flex;
         }
