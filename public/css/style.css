@@ -3,6 +3,7 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
+            font-family: 'Redressed', 'cursive';
         }
         
          :root {
@@ -18,7 +19,8 @@
         }
         
         header {
-            margin-top: 50px;
+            padding: 40px;
+            margin: 0px auto;
         }
         
         header h1 {
@@ -58,11 +60,11 @@
             border-bottom-right-radius: 0;
             color: var(--display-text);
             width: 450px;
-            font-family: "Raleway", sans-serif;
         }
         
         .display p {
-            padding: 10px;
+            padding: 15px;
+            font-size: 24px;
         }
         
         .buttonRow {
@@ -74,6 +76,11 @@
             display: block;
             width: 50%;
             padding: 10px;
+            font-size: 20px;
+        }
+        
+        .join {
+            padding: 20px;
         }
         
         svg {
