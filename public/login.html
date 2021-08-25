@@ -14,13 +14,14 @@
         <form id="form-log-in" method="post" action="login">
             <div class="tittle text-center">login</div>
             <input class="username style-input " id="usernaame-input" type="text" name="username" value="" placeholder="username" required>
-            <div id="nameerror"></div>
+            <div class="error" id="nameerror"></div>
             <input class="password style-input " id="password" type="password" name="pssword" value="" placeholder="password" required>
-            <div id="passworderror"></div>
+            <div class="error" id="passworderror"></div>
             <button type="submit">login</button>
         </form>
         <div class="emptyfieldWarning" id="emptyfieldWarning"></div>
     </div>
+    <script src="./js/dom/general.js"></script>
     <script src="./js/dom/loggin.js"></script>
 </body>
 
