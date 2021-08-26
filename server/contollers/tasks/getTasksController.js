@@ -1,9 +1,10 @@
+const jwt = require('jsonwebtoken');
 const { getTasksQuery } = require('../../database/quieres');
 
 const getTasks = (req, res) => {
-  const userId = 1; // get from cookie
-
-  getTasksQuery(userId).then(console.log).catch(console.log);
+  const token = (req.cookies.accessToken);
+  const decoded = jwt.decode(token);
+  getTasksQuery(decoded.id).then((data) => { res.json(data.rows); }).catch((err) => res.json(err));
 };
 
 module.exports = getTasks;
