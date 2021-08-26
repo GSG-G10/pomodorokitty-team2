@@ -126,3 +126,7 @@ p {
     font-family: 'Redressed', 'cursive';
     text-transform: capitalize;
 }
+
+.hide {
+    display: none;
+}
