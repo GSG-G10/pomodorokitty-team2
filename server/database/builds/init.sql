@@ -3,8 +3,8 @@ DROP TABLE IF EXISTS users , tasks CASCADE ;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
+    email TEXT NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
@@ -14,8 +14,8 @@ CREATE TABLE tasks (
     user_id INTEGER REFERENCES users(id) 
 );
 
-INSERT INTO users(username , password , email , birth_date) VALUES
-('NIZAR', '$2a$10$OdnNFvdTy66xP27wkgIKu.U1j0cC4yttzyToVNY6l76upG5RxcrUW','nizar@gmail.com','20-OCT-95');
+INSERT INTO users(username , password , email ) VALUES
+('NIZAR', '$2a$10$OdnNFvdTy66xP27wkgIKu.U1j0cC4yttzyToVNY6l76upG5RxcrUW','nizar@gmail.com');
 
 INSERT INTO tasks (name ,is_done , duration ,user_id) VALUES 
 ('create server','true' , '30', 1 );
