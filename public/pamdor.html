@@ -20,10 +20,10 @@
         <section class="display-container">
             <div class="display">
                 <div class="time">25:00</div>
-                <form method="post" action="">
+                <form>
                     <div class="buttonRow flex">
-                        <button class="start">start</button>
-                        <button class="stop">stop</button>
+                        <button type="button" class="start">start</button>
+                        <button type="button" class="stop">stop</button>
                     </div>
                     <input class="accomplish" type="text" placeholder="What would you like to accomplish?">
                 </form>
@@ -35,18 +35,21 @@
         <div class="option-menu">
             <h2>set times</h2>
             <p>This will reset the clock if you have a timer in progress</p>
-            <div class="work-time flex">
-                <p>Work time (in min):</p>
-                <input class="work-time-input" type="text">
-            </div>
-            <div class="break-time flex">
-                <p>break time (in min):</p>
-                <input class="break-time-input" type="text">
-            </div>
-            <button type="button" class="set-times">set times</button>
-
+            <form class="form" method="post" action="/setTime">
+                <div class="work-time flex">
+                    <p>Work time (in min):</p>
+                    <input class="work-time-input" type="number" min="25" max="50" step="5" required>
+                </div>
+                <div class="break-time flex">
+                    <p>break time (in min):</p>
+                    <input class="break-time-input" type="number" min="5" max="50" step="1" required>
+                </div>
+                <button type="submit" class="set-times">set times</button>
+            </form>
         </div>
     </section>
+
+    <script src="./js/dom/option.js"></script>
 </body>
 
 </html>
