@@ -1,5 +1,4 @@
 const express = require('express');
-const { join } = require('path');
 
 const router = express.Router();
 
@@ -8,21 +7,19 @@ const { login, signUp } = require('./contollers/authentication');
 const { getTasks, insertTask, taskDone } = require('./contollers/tasks');
 const loginPage = require('./contollers/loginPageController');
 const signUpPage = require('./contollers/signUpPageController');
+const mainPage = require('./contollers/mainPageController');
+const logoutPage = require('./contollers/logoutController');
 
 router.get('/tasks', getTasks);
 router.post('/tasks', insertTask);
 router.put('/tasks/:taskId/done', taskDone);
 router.get('/login', loginPage);
 router.get('/signUp', signUpPage);
-router.get('/main', (req, res) => {
-  if (req.cookies.accessToken) {
-    res.sendFile(join(__dirname, '..', 'public', 'pamdor.html'));
-  } else {
-    res.redirect('/login');
-  }
-});
+router.get('/main', mainPage);
 router.post('/login', login);
 router.post('/sign-up', signUp);
+
+router.post('logout', logoutPage);
 
 router.use(notFound);
 router.use(serverError);

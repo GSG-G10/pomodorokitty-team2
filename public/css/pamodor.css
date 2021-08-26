@@ -20,6 +20,11 @@ body {
     height: 100vh;
     position: relative;
 }
+#buttons-div{
+    margin: 1rem auto;
+    width: 20%;
+    justify-content: center;
+}
 
 .flex {
     display: flex;
@@ -83,6 +88,7 @@ input {
     background-color: white;
     width: 50%;
     top: 140px;
+    left: 350px;
     font-family: 'Redressed', 'cursive';
 }
 
@@ -130,3 +136,50 @@ p {
 .hide {
     display: none;
 }
+
+svg {
+            margin: auto;
+            position: absolute;
+            top: 53px;
+            left: 760px;
+            width: 30px;
+        }
+        
+        .svg-2 {
+            top: 53px;
+            left: 697px;
+        }
+        
+        #lid {
+            animation: blink 2.4s infinite;
+        }
+        
+        #eye {
+            animation: squeeze 2.4s infinite;
+        }
+        
+        @keyframes blink {
+            70% {
+                transform: none;
+                animation-timing-function: ease-in;
+            }
+            90% {
+                transform: translateY(15px) scaleY(0)
+            }
+            100% {
+                animation-timing-function: ease-out;
+            }
+        }
+        
+        @keyframes squeeze {
+            90% {
+                transform: none;
+                animation-timing-function: ease-in;
+            }
+            93% {
+                transform: translateY(3px) scaleY(0.8)
+            }
+            100% {
+                animation-timing-function: ease-out;
+            }
+        }
