@@ -1,38 +1,43 @@
-const timeContainer = document.querySelector(".time")
+const timeContainer = document.querySelector('.time');
+let globalVal = document.querySelector('.work-time-input').value;
+
 const getTimeFromInput = () => {
-    const worktime = document.querySelector(".work-time-input").value;
-    const breaktime = document.querySelector(".break-time-input").value;
-    return { worktime, breaktime };
-}
-let { worktime, breaktime } = Number(getTimeFromInput());
+  const worktime = document.querySelector('.work-time-input').value;
+  const breaktime = document.querySelector('.break-time-input').value;
+  return { worktime, breaktime };
+};
+const { worktime, breaktime } = Number(getTimeFromInput());
 
 console.log(worktime);
-
-
 
 // const requestToServer {
 //     fetch()
 // }
 
 const showTimeInDom = () => {
-    const { worktime, breaktime } = getTimeFromInput();
+  const { worktime, breaktime } = getTimeFromInput();
 
-    timeContainer.textContent = `${worktime}:00`;
-
-}
-
+  timeContainer.textContent = `${worktime}:00`;
+};
+let interval;
 const countDown = () => {
-    value = value--;
-    timeContainer.textContent = `${value}:00`;
-    console.log(value);
-}
+  globalVal = parseInt(globalVal, 10) || 25;
+  // eslint-disable-next-line no-plusplus
+  globalVal--;
+  timeContainer.textContent = `${globalVal}:00`;
+    console.log(globalVal);
+  if (globalVal === 0) {
+    clearInterval(interval);
+  }
+};
 
-document.querySelector(".start").onclick = () => {
-    countDown(document.querySelector(".work-time-input").value);
-}
-setInterval(countDown, 60000);
+interval = setInterval(countDown, 60000);
 
-document.querySelector(".form").addEventListener("submit", (e) => {
-    showTimeInDom();
-    e.preventDefault();
+document.querySelector('.start').onclick = () => {
+  countDown();
+};
+
+document.querySelector('.form').addEventListener('submit', (e) => {
+  showTimeInDom();
+  e.preventDefault();
 });
