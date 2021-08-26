@@ -8,17 +8,19 @@ const login = (req, res) => {
   // server side validation
   loginSchema
     .validateAsync({ username, password })
-    .then((result) => console.log(result))
+    .then((result) => {
+      console.log(result);
+      loginQuery({ username, password })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch(console.log);
+    })
+
     .catch((err) => {
       console.log(err);
-      res.json('your credentials does not match our records');
+      res.status(401).json({ msg: 'your credentials does not match our records' });
     });
-
-  loginQuery({ username, password })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch(console.log);
 };
 
 module.exports = login;

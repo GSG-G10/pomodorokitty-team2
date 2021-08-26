@@ -1,4 +1,5 @@
 const express = require('express');
+const { join } = require('path');
 
 const router = express.Router();
 
@@ -13,6 +14,9 @@ router.post('/tasks', insertTask);
 router.put('/tasks/:taskId/done', taskDone);
 router.get('/login', loginPage);
 router.get('/signUp', signUpPage);
+router.get('/main', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'pamdor.html'));
+});
 router.post('/login', login);
 router.post('/sign-up', signUp);
 
