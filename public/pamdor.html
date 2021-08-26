@@ -19,9 +19,9 @@
                 <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-               <div class="history">
-                   <div class="old-task"></div>
-               </div>
+                <div class="history">
+                    <div class="old-task"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -29,23 +29,39 @@
         <section class="cat">
             <img src="./img/1.png" alt="cat">
             <button type="button" id="modal-button">History</button>
+            <button type="button" id="option-button">option</button>
         </section>
 
 
         <section class="display-container">
             <div class="display">
                 <div class="time">25:00</div>
-                <form method="post" action="">
+                <form>
                     <div class="buttonRow flex">
-                        <button class="start">start</button>
-                        <button class="stop">stop</button>
+                        <button type="button" class="start">start</button>
+                        <button type="button" class="stop">stop</button>
                     </div>
                     <input class="accomplish" type="text" placeholder="What would you like to accomplish?">
                 </form>
             </div>
         </section>
     </section>
-    <script src="./js/dom/historyTab.js"></script>
-</body>
+    <div class="option-menu hide">
+        <h2>set times</h2>
+        <p>This will reset the clock if you have a timer in progress</p>
+        <form class="form" method="post" action="/setTime">
+            <div class="work-time flex">
+                <p>Work time (in min):</p>
+                <input class="work-time-input" type="number" min="25" max="50" step="5" required>
+            </div>
+            <div class="break-time flex">
+                <p>break time (in min):</p>
+                <input class="break-time-input" type="number" min="5" max="50" step="1" required>
+            </div>
+            <button type="submit" class="set-times">set times</button>
+        </form>
+    </div>
+    </section>
 
-</html>
+    <script src="./js/dom/option.js"></script>
+    <script src="./js/dom/historyTab.js"></script>
