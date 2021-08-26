@@ -15,7 +15,7 @@ CREATE TABLE tasks (
 );
 
 INSERT INTO users(username , password , email , birth_date) VALUES
-('NIZAR', '0599999999','nizar@gmail.com','20-OCT-95');
+('NIZAR', '$2a$10$OdnNFvdTy66xP27wkgIKu.U1j0cC4yttzyToVNY6l76upG5RxcrUW','nizar@gmail.com','20-OCT-95');
 
 INSERT INTO tasks (name ,is_done , duration ,user_id) VALUES 
 ('create server','true' , '30', 1 );
