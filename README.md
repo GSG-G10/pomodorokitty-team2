@@ -37,7 +37,7 @@ HOPE YOUR DAY IS FULL OF ACHIEVEMENTS :hearts:
 ## Running the project locally: :inbox_tray: 
 
 - git clone https://github.com/GSG-G10/pomodorokitty-team2.git
-- cd Jole Library
+- cd pomodoro kitty
 - npm i
 - npm run dev
 
